@@ -400,6 +400,10 @@ output {
 iframe {
     border: 0;
 }
+
+.yt-size {
+    height: 480px;
+}
 summary {
     display: list-item;
     cursor: pointer;
@@ -4454,6 +4458,15 @@ fieldset:disabled .btn {
 .card-header-tabs {
     margin-right: -0.5rem;
     margin-left: -0.5rem;
+}
+
+.card-header img {
+    display: block;
+    position: relative;
+    min-height: 310px;
+    height: 100%;
+    max-height: 310px;
+    margin: 0 auto;
 }
 .card-img-overlay {
     position: absolute;
