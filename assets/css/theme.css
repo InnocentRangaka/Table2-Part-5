@@ -46,6 +46,7 @@
     --bs-font-sans-serif: Open Sans;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0));
+    --header: #f5f5f5
 }
 *,
 :after,
@@ -57,16 +58,18 @@
         scroll-behavior: smooth;
     }
 }
+
 body {
     margin: 0;
     font-family: var(--bs-font-sans-serif);
     font-size: 1rem;
     line-height: 1.5;
     color: var(--bs-body-color);
-    background-color: #fff;
+    background-color: var(--header);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 hr {
     margin: 1rem 0;
     color: inherit;
@@ -16283,7 +16286,7 @@ hr.horizontal.gray-light {
     transform: translateX(5px);
 }
 .navbar-light {
-    background-color: #fff !important;
+    background-color: var(--bg-header) !important;
 }
 .navbar-light .navbar-toggler {
     border: none;
@@ -19590,4 +19593,78 @@ pre[class*="language-"] {
     .ps {
         overflow: auto !important;
     }
+}
+
+.bg-header {
+    background-color: var(--header);
+}
+
+header {
+    /* display: flex; */
+    position: sticky;
+    width: 100%;
+    /* max-width: 100vw; */
+    top: 0;
+    color: currentcolor;
+    background-color: var(--header);
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    transition: all .3s ease-in-out;
+}
+
+/* .heading {
+    
+    margin-top: 1.19em;
+    line-height: 52px;
+    font-size: 42px;
+    margin-bottom: -0.27em;
+    font-style: normal;
+    font-weight: 700;
+} */
+
+/* .sticky {
+    position: sticky !important;
+} */
+
+blockquote {
+    text-align: center;
+    padding: 45px 80px 50px;
+    position: relative;
+    margin: 40px 0;
+}
+
+blockquote:after, blockquote:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 8px;
+    background-image: url(../../assets/img/blockquote.png);
+}
+
+blockquote:after {
+    top: auto;
+    bottom: 0;
+}
+
+blockquote .blockquote-cite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+    margin: 30px 0 0;
+}
+
+.article blockquote {
+    width: 90%;
+}
+
+.article .container blockquote {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
